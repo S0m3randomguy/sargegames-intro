@@ -1,9 +1,8 @@
-
-
 /**
  * SargeGames intro
- */
+*/
 //% color="#147cb5" weight=0 icon="\uf03d" block="SargeGames"
+
 namespace SargeGames {
 
     /**
