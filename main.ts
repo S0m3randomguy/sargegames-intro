@@ -1,21 +1,25 @@
 
 
-scene.setBackgroundImage(assets.image`logo`)
-
 /**
  * Provides access to basic micro:bit functionality.
  */
-//% color="#65b7e4" weight=0 icon="\uf03d" block="SargeGames"
+//% color="#147cb5" weight=0 icon="\uf03d" block="SargeGames"
 namespace SargeGames {
 
     /**
-     * Events can be made into statements that can be put in line with other events,
-     * similar to loops or conditions.
+     * Show the SargeGames intro
      */
-    //% block="show SargeGames intro"
+    //% block="show SargeGames intro and run"
     //% handlerStatement
     export function showIntro(handler: () => void) {
+        scene.setBackgroundImage(assets.image`logo`);
+        color.startFade(color.Black, color.originalPalette, 1000);
+        pause(1500);
+        color.startFade(color.originalPalette, color.Black, 500);
+        color.pauseUntilFadeDone()
         handler();
     }
 
 }
+
+SargeGames.showIntro(() => {});
