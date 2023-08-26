@@ -21,5 +21,3 @@ namespace SargeGames {
     }
 
 }
-
-SargeGames.showIntro(() => {});
